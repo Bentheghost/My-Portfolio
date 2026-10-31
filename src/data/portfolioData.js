@@ -3,7 +3,7 @@ export const portfolioData = {
   meta: {
     title: "Chukwuebuka Benjamin Ugwu — Full-Stack Engineer & AI Systems Builder",
     description: "Portfolio of Chukwuebuka Benjamin Ugwu. Full-Stack Engineer and AI Systems Builder specializing in low-bandwidth optimization, offline-first architectures, BKT, and Reinforcement Learning.",
-    url: "https://bentheghost.github.io",
+    url: "https://benjamindev-uc.vercel.app",
     ogImage: "profile.jpg",
     twitterHandle: "@Topboy_benji",
     themeColor: "#090a0c"
