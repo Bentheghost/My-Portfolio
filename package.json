@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Portfolio of Chukwuebuka Benjamin Ugwu — Full-Stack Engineer & AI Systems Builder",
+  "author": "Chukwuebuka Benjamin Ugwu <ebukaugwu41@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:html": "node scripts/build.js",
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./style.css --minify",
+    "build": "npm run build:html && npm run build:css",
+    "lint": "node scripts/lint.js",
+    "watch:css": "tailwindcss -i ./src/styles/input.css -o ./style.css --watch",
+    "dev": "node scripts/build.js && tailwindcss -i ./src/styles/input.css -o ./style.css --watch",
+    "preview": "node scripts/preview.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,1453 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chukwuebuka Benjamin Ugwu — Full-Stack Engineer & AI Systems Builder</title>
+    <meta name="description" content="Portfolio of Chukwuebuka Benjamin Ugwu. Full-Stack Engineer and AI Systems Builder specializing in low-bandwidth optimization, offline-first architectures, BKT, and Reinforcement Learning." />
+    <meta name="theme-color" content="#090a0c" />
+
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+
+    <meta property="og:title" content="Chukwuebuka Benjamin Ugwu — Full-Stack Engineer & AI Systems Builder" />
+    <meta property="og:description" content="Building production-ready full-stack applications and AI pipelines engineered for real-world constraints." />
+    <meta property="og:image" content="profile.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bentheghost.github.io" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Topboy_benji" />
+    <meta name="twitter:creator" content="@Topboy_benji" />
+    <meta name="twitter:title" content="Chukwuebuka Benjamin Ugwu — Full-Stack Engineer & AI Systems Builder" />
+    <meta name="twitter:description" content="Portfolio of Chukwuebuka Benjamin Ugwu. Full-Stack Engineer and AI Systems Builder specializing in low-bandwidth optimization, offline-first architectures, BKT, and Reinforcement Learning." />
+    <meta name="twitter:image" content="profile.jpg" />
+
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chukwuebuka Benjamin Ugwu",
+  "alternateName": [
+    "benjamin",
+    "Bentheghost"
+  ],
+  "jobTitle": "Full-Stack Engineer & AI Systems Builder",
+  "url": "https://bentheghost.github.io",
+  "image": "https://bentheghost.github.io/profile.jpg",
+  "sameAs": [
+    "https://github.com/Bentheghost",
+    "https://www.youtube.com/@TechUntold-btg",
+    "https://x.com/Topboy_benji"
+  ],
+  "knowsAbout": [
+    "Full-Stack Development",
+    "React",
+    "Next.js",
+    "Python",
+    "Bayesian Knowledge Tracing",
+    "Reinforcement Learning",
+    "PostgreSQL",
+    "Redis",
+    "Low-Bandwidth Architecture",
+    "Network Benchmarking"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Federal University of Technology, Minna"
+  }
+}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      (function() {
+        try {
+          if (localStorage.theme === "light") {
+            document.documentElement.classList.remove("dark");
+          } else {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    class="bg-slate-50 text-zinc-800 dark:bg-background dark:text-gray-200 font-mono antialiased selection:bg-emerald-500 selection:text-black min-h-screen transition-colors duration-300"
+  >
+    
+    <div
+      id="matrix-overlay"
+      class="fixed inset-0 bg-black flex items-center justify-center z-50 transition-opacity duration-700 opacity-100 overflow-hidden h-screen w-screen"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Terminal Bootloader"
+    >
+      <div class="text-center max-w-md mx-auto px-4 w-full">
+        <div
+          id="matrix-prompt"
+          class="text-emerald-400 font-mono text-base sm:text-lg mb-8 lowercase flex items-center justify-center tracking-wider"
+          aria-live="polite"
+        >
+          <span aria-hidden="true">&gt;&nbsp;</span>
+          <span id="matrix-text">enter the matrix</span>
+          <span
+            class="inline-block w-2 h-5 bg-emerald-400 ml-1.5 animate-pulse"
+            aria-hidden="true"
+          ></span>
+        </div>
+
+        <div
+          id="matrix-boot-log"
+          class="hidden text-left bg-zinc-950/90 border border-emerald-500/30 p-4 rounded-lg font-mono text-xs text-emerald-400 mb-8 space-y-1.5 min-h-[140px] shadow-lg shadow-emerald-950/30"
+          aria-live="polite"
+        >
+          <div id="matrix-log-lines" class="space-y-1"></div>
+        </div>
+
+        <div id="matrix-controls" class="flex justify-center gap-4">
+          <button
+            id="btn-matrix-yes"
+            type="button"
+            aria-label="Enter interactive terminal sequence"
+            class="bg-transparent text-emerald-400 font-mono px-5 py-2 hover:bg-emerald-400 hover:text-black transition-all duration-300 lowercase text-sm cursor-pointer border border-emerald-500/40 rounded focus:outline-none focus:ring-2 focus:ring-emerald-400"
+          >
+            [ yes ]
+          </button>
+          <button
+            id="btn-matrix-skip"
+            type="button"
+            aria-label="Skip terminal intro and enter developer portfolio"
+            class="bg-transparent text-zinc-400 font-mono px-5 py-2 hover:bg-zinc-700 hover:text-white transition-all duration-300 lowercase text-sm cursor-pointer border border-zinc-800 rounded focus:outline-none focus:ring-2 focus:ring-zinc-500"
+          >
+            [ skip ]
+          </button>
+        </div>
+      </div>
+    </div>
+  
+
+    <div
+      class="fixed top-0 left-0 right-0 h-28 bg-gradient-to-b from-slate-200/50 via-slate-100/20 to-transparent dark:from-black dark:via-black/80 dark:to-transparent pointer-events-none z-30 transition-all duration-300"
+      aria-hidden="true"
+    ></div>
+    <div
+      class="fixed bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-slate-200/50 via-slate-100/20 to-transparent dark:from-black dark:via-black/80 dark:to-transparent pointer-events-none z-30 transition-all duration-300"
+      aria-hidden="true"
+    ></div>
+
+    <main
+      id="portfolio-main"
+      class="relative z-10 max-w-4xl mx-auto px-6 py-12 md:py-20 lg:py-24 transition-opacity duration-1000 opacity-0"
+    >
+      
+    <header
+      class="mt-6 md:mt-0 mb-14 glass-card p-6 rounded-2xl relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all duration-300"
+    >
+      <div class="flex items-center gap-4">
+        <div
+          class="w-16 h-16 sm:w-16 sm:h-16 rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-200/80 dark:border-zinc-700/60 shadow-md shrink-0 relative group"
+        >
+          <img
+            src="profile.jpg"
+            alt="Portrait of Chukwuebuka Benjamin Ugwu, Full-Stack Engineer and AI Systems Builder"
+            width="64"
+            height="64"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-300"
+          />
+        </div>
+
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-2">
+            <h1
+              class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-white lowercase"
+            >
+              benjamin
+            </h1>
+            <div class="relative inline-block" title="Verified Developer Profile">
+              <svg
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                aria-label="Verified developer profile"
+                role="img"
+                class="w-5 h-5 text-emerald-500 cursor-pointer"
+              >
+                <path
+                  d="M10.007 2.10377C8.60544 1.65006 7.08181 2.28116 6.41156 3.59306L5.60578 5.17023C5.51004 5.35763 5.35763 5.51004 5.17023 5.60578L3.59306 6.41156C2.28116 7.08181 1.65006 8.60544 2.10377 10.007L2.64923 11.692C2.71404 11.8922 2.71404 12.1078 2.64923 12.308L2.10377 13.993C1.65006 15.3946 2.28116 16.9182 3.59306 17.5885L5.17023 18.3942C5.35763 18.49 5.51004 18.6424 5.60578 18.8298L6.41156 20.407C7.08181 21.7189 8.60544 22.35 10.007 21.8963L11.692 21.3508C11.8922 21.286 12.1078 21.286 12.308 21.3508L13.993 21.8963C15.3946 22.35 16.9182 21.7189 17.5885 20.407L18.3942 18.8298C18.49 18.6424 18.6424 18.49 18.8298 18.3942L20.407 17.5885C21.7189 16.9182 22.35 15.3946 21.8963 13.993L21.3508 12.308C21.286 12.1078 21.286 11.8922 21.3508 11.692L21.8963 10.007C22.35 8.60544 21.7189 7.08181 20.407 6.41156L18.8298 5.60578C18.6424 5.51004 18.49 5.35763 18.3942 5.17023L17.5885 3.59306C16.9182 2.28116 15.3946 1.65006 13.993 2.10377L12.308 2.64923C12.1078 2.71403 11.8922 2.71404 11.692 2.64923L10.007 2.10377ZM6.75977 11.7573L8.17399 10.343L11.0024 13.1715L16.6593 7.51465L18.0735 8.92886L11.0024 15.9999L6.75977 11.7573Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <p
+            class="text-[11px] text-zinc-500 dark:text-zinc-400 lowercase tracking-wider font-mono"
+          >
+            @Bentheghost
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="sm:absolute sm:top-4 sm:right-6 flex flex-col items-start sm:items-end gap-1.5 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-zinc-200/80 dark:border-zinc-800/80"
+      >
+        <div class="relative group cursor-pointer" tabindex="0" role="status" aria-label="Current status: online, available for remote work">
+          <div
+            class="flex items-center gap-1.5 text-[10px] lowercase tracking-wider"
+          >
+            <span
+              class="w-1.5 h-1.5 bg-emerald-400 rounded-full border border-emerald-300 shadow-[0_0_6px_#10b981] animate-pulse"
+              aria-hidden="true"
+            ></span>
+            <span
+              class="text-emerald-500 dark:text-emerald-400 text-[10px] font-mono font-medium"
+              >online</span
+            >
+          </div>
+
+          <div
+            role="tooltip"
+            class="absolute right-0 bottom-full mb-2 hidden group-hover:flex group-focus:flex items-center px-3 py-1 rounded-xl text-[11px] font-mono bg-zinc-900/95 dark:bg-zinc-900/95 backdrop-blur-md border border-zinc-700/70 text-white shadow-2xl z-30 pointer-events-none whitespace-nowrap transition-all duration-200"
+          >
+            <span>available for remote work</span>
+            <span
+              aria-hidden="true"
+              class="absolute -bottom-1 right-3 w-2 h-2 bg-zinc-900/95 border-r border-b border-zinc-700/70 rotate-45"
+            ></span>
+          </div>
+        </div>
+
+        <div
+          class="glass-pill px-2.5 py-1 rounded-lg text-[10px] lowercase tracking-wider transition-all duration-300 cursor-default"
+        >
+          <span class="text-zinc-800 dark:text-white text-[10px] font-mono"
+            >99.98% uptime...</span
+          >
+        </div>
+
+        <div
+          class="w-24 h-0.5 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden"
+          aria-hidden="true"
+        >
+          <div
+            class="h-full bg-zinc-800 dark:bg-white rounded-full animate-progress"
+          ></div>
+        </div>
+
+        <div
+          class="flex items-center gap-1 text-[10px] lowercase tracking-wider flex-wrap"
+        >
+          <div
+            class="glass-pill px-2 py-1 rounded-lg transition-all duration-300 cursor-pointer"
+            title="System local time (click to toggle 12h/24h)"
+          >
+            <time
+              id="telemetry-time"
+              class="text-zinc-800 dark:text-white font-mono"
+              >11:21:09</time
+            >
+          </div>
+          <div
+            class="glass-pill px-2 py-1 rounded-lg transition-all duration-300 cursor-help"
+            title="System local date"
+          >
+            <time
+              id="telemetry-date"
+              class="text-zinc-800 dark:text-white font-mono"
+              >sat, oct 31</time
+            >
+          </div>
+          <div
+            class="glass-pill px-2 py-1 rounded-lg transition-all duration-300 cursor-help"
+            title="Continuous system uptime (anchored to 25 days)"
+          >
+            <span
+              id="telemetry-runtime"
+              class="text-emerald-600 dark:text-emerald-400 font-mono font-bold"
+              >25d 0h 0m</span
+            >
+          </div>
+
+          <button
+            id="theme-toggle"
+            type="button"
+            class="glass-pill px-2 py-1 rounded-lg text-[10px] font-mono flex items-center gap-1 cursor-pointer hover:border-emerald-500/50 transition-all text-zinc-700 dark:text-zinc-300 ml-0.5 focus:outline-none focus:ring-1 focus:ring-emerald-400"
+            aria-label="Toggle dark or light theme"
+            title="Toggle Dark / Light Theme"
+          >
+            <span id="theme-toggle-icon" aria-hidden="true">☀</span>
+          </button>
+        </div>
+      </div>
+    </header>
+  
+      
+    <section class="mb-16 space-y-6" aria-labelledby="section-about-title">
+      <div>
+        <h2
+          id="section-about-title"
+          class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2"
+        >
+          <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+          about
+        </h2>
+        <p
+          class="text-xs text-zinc-500 dark:text-zinc-400 lowercase tracking-wider mt-1"
+        >
+          systems, intelligence & real-world constraints
+        </p>
+      </div>
+
+      <div
+        class="space-y-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 font-light"
+      >
+        <p>I specialize in building production-ready full-stack web applications and AI-powered systems engineered for real-world constraints—specifically <strong class="text-zinc-900 dark:text-white font-medium">low-bandwidth optimization</strong>, <strong class="text-zinc-900 dark:text-white font-medium">offline-first architectures</strong>, and <strong class="text-zinc-900 dark:text-white font-medium">localized multilingual scaffolding</strong>.</p>
+<p>Working primarily with <strong class="text-emerald-600 dark:text-emerald-300 font-normal">Python</strong>, <strong class="text-emerald-600 dark:text-emerald-300 font-normal">React</strong>, <strong class="text-emerald-600 dark:text-emerald-300 font-normal">PostgreSQL</strong>, and <strong class="text-emerald-600 dark:text-emerald-300 font-normal">Redis</strong>, I bridge the gap between responsive frontend interfaces and intelligent backend pipelines—integrating machine learning models like <strong class="text-zinc-900 dark:text-white font-medium">Bayesian Knowledge Tracing (BKT)</strong> and <strong class="text-zinc-900 dark:text-white font-medium">Reinforcement Learning (RL)</strong> to deliver personalized, adaptive user experiences.</p>
+
+        <div
+          class="glass-card p-5 rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 my-4 space-y-3"
+        >
+          <div
+            class="text-xs font-semibold uppercase text-emerald-600 dark:text-emerald-400 tracking-wider flex items-center gap-2"
+          >
+            <span aria-hidden="true">⚡</span>
+            <span>Key Impact & Deployment Metrics</span>
+          </div>
+          <ul class="space-y-2 text-xs text-zinc-700 dark:text-zinc-300">
+            
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 dark:text-emerald-400" aria-hidden="true">▹</span>
+          <span><strong class="text-zinc-900 dark:text-white">Multilingual Adaptive Pipeline:</strong> Architected dual-engine BKT + RL learning pipeline supporting 4 languages (English, Yoruba, Igbo, and Hausa) across multiple curricula.</span>
+        </li>
+      
+
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 dark:text-emerald-400" aria-hidden="true">▹</span>
+          <span><strong class="text-zinc-900 dark:text-white">Low-Bandwidth Production Launches:</strong> Deployed commercial web apps on Vercel with automated inquiry/order routing achieving sub-second load times under weak connectivity.</span>
+        </li>
+      
+
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-500 dark:text-emerald-400" aria-hidden="true">▹</span>
+          <span><strong class="text-zinc-900 dark:text-white">Systems & Throughput Benchmarking:</strong> Automated network throughput stress-testing across Windows client-server environments with iPerf3 and Python scripts to eliminate bottlenecks.</span>
+        </li>
+      
+          </ul>
+        </div>
+
+        <p class="text-zinc-600 dark:text-zinc-400 text-xs sm:text-sm">
+          Outside of writing code, I produce and script technology documentaries on YouTube (<a href="https://www.youtube.com/@TechUntold-btg" target="_blank" rel="noopener noreferrer" class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">@TechUntold-btg</a>) exploring the rise and fall of iconic hardware and software giants like WinRAR, Skype, and Nokia. When I'm not digging through tech history, I'm an avid European football analyst—tracking player metrics and match trends—or unwinding to Afrobeats and UK drill with Burna Boy and Dave on Spotify.
+        </p>
+      </div>
+    </section>
+  
+      
+    <section class="mb-16" aria-label="Action triggers">
+      <div class="flex items-center gap-2 mb-4">
+        <span
+          class="inline-block w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"
+          aria-hidden="true"
+        ></span>
+        <span
+          class="text-zinc-900 dark:text-white text-sm font-semibold tracking-wide"
+        >
+          explore verified proof of work
+        </span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="#projects"
+          class="group inline-flex items-center gap-3 px-6 py-3.5 bg-white dark:bg-zinc-900 border border-emerald-500/50 hover:border-emerald-400 hover:bg-emerald-500/10 text-zinc-900 dark:text-white font-mono text-xs uppercase tracking-widest rounded-lg transition-all duration-300 terminal-glow shadow-sm"
+        >
+          <span
+            class="text-emerald-600 dark:text-emerald-400 group-hover:translate-x-0.5 transition-transform font-bold"
+            aria-hidden="true"
+          >&gt;&gt;</span>
+          <span>see my work / featured projects</span>
+          <svg
+            class="w-4 h-4 text-emerald-600 dark:text-emerald-400 group-hover:translate-y-0.5 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="resume.pdf"
+          download="Chukwuebuka_Benjamin_Ugwu_Resume.pdf"
+          class="group inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/50 hover:bg-emerald-500 hover:text-black text-emerald-700 dark:text-emerald-400 font-mono text-xs uppercase tracking-widest rounded-lg transition-all duration-300"
+        >
+          <svg
+            class="w-4 h-4 transition-transform group-hover:translate-y-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+          </svg>
+          <span>download resume (pdf)</span>
+        </a>
+      </div>
+    </section>
+  
+      
+    <section class="mb-16" aria-labelledby="section-experience-title">
+      <h2
+        id="section-experience-title"
+        class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2 mb-8"
+      >
+        <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+        work experience
+      </h2>
+
+      <div
+        class="space-y-10 border-l border-zinc-300 dark:border-zinc-800 ml-3 pl-6"
+      >
+        
+        <article class="relative group">
+          <div
+            class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-slate-50 dark:ring-background group-hover:scale-125 transition-all duration-300"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1"
+          >
+            <h3
+              class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
+            >
+              
+          <a
+            href="https://github.com/Bentheghost/BFARMCON-landing-page"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors flex items-center gap-2"
+          >
+            <span>BFARMCON Limited</span>
+            <svg
+              class="w-4 h-4 text-zinc-400 group-hover:text-emerald-500 transition-colors"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">(aug 2026 – present)</span>
+          </div>
+          <p
+            class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1"
+          >
+            web developer
+          </p>
+          <p
+            class="text-sm text-zinc-700 dark:text-zinc-300 font-light mt-3 leading-relaxed"
+          >
+            Architected and launched a commercial agribusiness web presence and landing platform on Vercel with automated client inquiry routing and sub-second load times engineered specifically for low-bandwidth mobile environments.
+          </p>
+        </article>
+      
+
+        <article class="relative group">
+          <div
+            class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-4 ring-slate-50 dark:ring-background group-hover:scale-125 transition-all duration-300"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1"
+          >
+            <h3
+              class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
+            >
+              
+          <a
+            href="https://github.com/Bentheghost/Adaptive-Learning-System"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors flex items-center gap-2"
+          >
+            <span>Adaptive Learning Thesis / FUTMINNA</span>
+            <svg
+              class="w-4 h-4 text-zinc-400 group-hover:text-emerald-500 transition-colors"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">(2025 – 2026)</span>
+          </div>
+          <p
+            class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1"
+          >
+            lead ai & software researcher
+          </p>
+          <p
+            class="text-sm text-zinc-700 dark:text-zinc-300 font-light mt-3 leading-relaxed"
+          >
+            Researched and engineered an adaptive learning pipeline combining Bayesian Knowledge Tracing (BKT) and Reinforcement Learning. Developed personalized mastery tracking that dynamically adjusts question difficulty across 4 languages (English, Yoruba, Igbo, Hausa) for STEM & humanities students.
+          </p>
+        </article>
+      
+
+        <article class="relative group">
+          <div
+            class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-slate-50 dark:ring-background group-hover:bg-emerald-500 transition-all duration-300"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1"
+          >
+            <h3
+              class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
+            >
+              <span>Commercial Client Web Deployments</span>
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">(2023 – present)</span>
+          </div>
+          <p
+            class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1"
+          >
+            freelance full-stack developer
+          </p>
+          <p
+            class="text-sm text-zinc-700 dark:text-zinc-300 font-light mt-3 leading-relaxed"
+          >
+            Delivered custom full-stack solutions using React, Node.js, and Python. Modeled robust relational database schemas in PostgreSQL, implemented low-latency caching with Redis, and configured automated CI/CD deployment pipelines on Vercel.
+          </p>
+        </article>
+      
+
+        <article class="relative group">
+          <div
+            class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-slate-50 dark:ring-background group-hover:bg-emerald-500 transition-all duration-300"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1"
+          >
+            <h3
+              class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
+            >
+              <span>Systems & Network Benchmarking</span>
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">(2023 – 2024)</span>
+          </div>
+          <p
+            class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1"
+          >
+            network & qa benchmarking specialist
+          </p>
+          <p
+            class="text-sm text-zinc-700 dark:text-zinc-300 font-light mt-3 leading-relaxed"
+          >
+            Automated comprehensive network stress-testing across Windows client-server environments using iPerf3 and Python data scripts to pinpoint packet drops, latency bottlenecks, and bandwidth throughput ceilings.
+          </p>
+        </article>
+      
+
+        <article class="relative group">
+          <div
+            class="absolute -left-[31px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-slate-50 dark:ring-background group-hover:bg-emerald-500 transition-all duration-300"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1"
+          >
+            <h3
+              class="text-lg font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
+            >
+              <span>IRL IT Solutions</span>
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">(2022 – 2023)</span>
+          </div>
+          <p
+            class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1"
+          >
+            frontend web developer
+          </p>
+          <p
+            class="text-sm text-zinc-700 dark:text-zinc-300 font-light mt-3 leading-relaxed"
+          >
+            Developed responsive web interfaces, engineered reusable UI component libraries with modern JavaScript and CSS, and collaborated on cross-functional client deliverables.
+          </p>
+        </article>
+      
+      </div>
+    </section>
+  
+      
+    <section id="projects" class="mb-16 scroll-mt-24" aria-labelledby="section-projects-title">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2
+            id="section-projects-title"
+            class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2"
+          >
+            <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+            featured projects
+          </h2>
+          <p
+            class="text-xs text-zinc-500 dark:text-zinc-400 lowercase tracking-wider mt-1"
+          >
+            open-source repositories & production platforms
+          </p>
+        </div>
+        <a
+          href="https://github.com/Bentheghost"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 flex items-center gap-1 font-mono group"
+        >
+          <span>view github</span>
+          <span class="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <article
+          class="glass-card p-6 rounded-xl flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span
+                class="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold"
+              >[01] AI & EdTech</span>
+              
+          <a
+            href="https://github.com/Bentheghost/Adaptive-Learning-System"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-zinc-400 hover:text-emerald-500 transition-colors"
+            aria-label="View Adaptive-Learning-System on GitHub"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+          </a>
+        
+            </div>
+            <h3
+              class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+            >
+              Adaptive-Learning-System
+            </h3>
+            <p
+              class="text-xs text-zinc-600 dark:text-zinc-300 mt-2 leading-relaxed"
+            >
+              Dual-engine personalized education platform utilizing Bayesian Knowledge Tracing (BKT) and Reinforcement Learning (RL) to dynamically calibrate question difficulty and track concept mastery across 4 local languages.
+            </p>
+          </div>
+          <div
+            class="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800/80"
+          >
+            <div
+              class="flex flex-wrap gap-1.5 mb-3 text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <span class="glass-pill px-2 py-0.5 rounded">Python</span>
+<span class="glass-pill px-2 py-0.5 rounded">React.js</span>
+<span class="glass-pill px-2 py-0.5 rounded">PostgreSQL</span>
+<span class="glass-pill px-2 py-0.5 rounded">Redis</span>
+<span class="glass-pill px-2 py-0.5 rounded">BKT & RL</span>
+            </div>
+            
+          <a
+            href="https://github.com/Bentheghost/Adaptive-Learning-System"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-mono font-medium"
+          >
+            <span>inspect repo</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        
+          </div>
+        </article>
+      
+
+        <article
+          class="glass-card p-6 rounded-xl flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span
+                class="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold"
+              >[02] Production Commercial</span>
+              
+          <a
+            href="https://github.com/Bentheghost/BFARMCON-landing-page"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-zinc-400 hover:text-emerald-500 transition-colors"
+            aria-label="View BFARMCON-Landing-Page on GitHub"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+          </a>
+        
+            </div>
+            <h3
+              class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+            >
+              BFARMCON-Landing-Page
+            </h3>
+            <p
+              class="text-xs text-zinc-600 dark:text-zinc-300 mt-2 leading-relaxed"
+            >
+              High-converting commercial landing platform built for agribusiness operations, optimized for sub-second mobile load speeds and automated inquiry dispatch.
+            </p>
+          </div>
+          <div
+            class="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800/80"
+          >
+            <div
+              class="flex flex-wrap gap-1.5 mb-3 text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <span class="glass-pill px-2 py-0.5 rounded">JavaScript</span>
+<span class="glass-pill px-2 py-0.5 rounded">Tailwind CSS</span>
+<span class="glass-pill px-2 py-0.5 rounded">Vercel</span>
+<span class="glass-pill px-2 py-0.5 rounded">Form Routing</span>
+            </div>
+            
+          <a
+            href="https://github.com/Bentheghost/BFARMCON-landing-page"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-mono font-medium"
+          >
+            <span>inspect repo</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        
+          </div>
+        </article>
+      
+
+        <article
+          class="glass-card p-6 rounded-xl flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span
+                class="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold"
+              >[03] Assessment Engine</span>
+              
+          <a
+            href="https://github.com/Bentheghost/Quiz-Master"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-zinc-400 hover:text-emerald-500 transition-colors"
+            aria-label="View Quiz-Master on GitHub"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+          </a>
+        
+            </div>
+            <h3
+              class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+            >
+              Quiz-Master
+            </h3>
+            <p
+              class="text-xs text-zinc-600 dark:text-zinc-300 mt-2 leading-relaxed"
+            >
+              Lightweight interactive quiz application featuring dynamic scoring algorithms, topic taxonomy, and real-time client state management.
+            </p>
+          </div>
+          <div
+            class="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800/80"
+          >
+            <div
+              class="flex flex-wrap gap-1.5 mb-3 text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <span class="glass-pill px-2 py-0.5 rounded">JavaScript</span>
+<span class="glass-pill px-2 py-0.5 rounded">React</span>
+<span class="glass-pill px-2 py-0.5 rounded">Node.js</span>
+<span class="glass-pill px-2 py-0.5 rounded">CSS3</span>
+            </div>
+            
+          <a
+            href="https://github.com/Bentheghost/Quiz-Master"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-mono font-medium"
+          >
+            <span>inspect repo</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        
+          </div>
+        </article>
+      
+
+        <article
+          class="glass-card p-6 rounded-xl flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group"
+        >
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span
+                class="text-xs text-emerald-600 dark:text-emerald-400 font-mono font-semibold"
+              >[04] Systems Benchmarking</span>
+              <span class="text-xs text-zinc-500 font-mono">CLI Suite</span>
+            </div>
+            <h3
+              class="text-base font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+            >
+              Network Throughput & Latency Suite
+            </h3>
+            <p
+              class="text-xs text-zinc-600 dark:text-zinc-300 mt-2 leading-relaxed"
+            >
+              Automated client-server network stress-testing suite in Python and iPerf3 executing bandwidth saturation tests and packet-loss diagnostic logging.
+            </p>
+          </div>
+          <div
+            class="mt-4 pt-4 border-t border-zinc-200 dark:border-zinc-800/80"
+          >
+            <div
+              class="flex flex-wrap gap-1.5 mb-3 text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <span class="glass-pill px-2 py-0.5 rounded">Python</span>
+<span class="glass-pill px-2 py-0.5 rounded">iPerf3</span>
+<span class="glass-pill px-2 py-0.5 rounded">Sockets</span>
+<span class="glass-pill px-2 py-0.5 rounded">Windows Server</span>
+            </div>
+            
+          <span class="inline-flex items-center gap-1.5 text-xs text-zinc-500 font-mono">
+            <span>research / test tooling</span>
+          </span>
+        
+          </div>
+        </article>
+      
+      </div>
+    </section>
+  
+      
+    <section class="mb-16" aria-labelledby="section-roles-title">
+      <h2
+        id="section-roles-title"
+        class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2 mb-6"
+      >
+        <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+        open to roles
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <article
+          class="glass-card p-5 rounded-xl group hover:border-emerald-500/40 transition-all duration-300"
+        >
+          <h3
+            class="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors mb-1"
+          >
+            full-stack engineering
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400">
+            React / Next.js, Node.js, Python, PostgreSQL, Redis, RESTful & GraphQL APIs
+          </p>
+        </article>
+      
+
+        <article
+          class="glass-card p-5 rounded-xl group hover:border-emerald-500/40 transition-all duration-300"
+        >
+          <h3
+            class="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors mb-1"
+          >
+            ai / ml & agent engineering
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400">
+            LLM integrations, RAG pipelines, fine-tuning, agentic workflows, BKT & RL
+          </p>
+        </article>
+      
+
+        <article
+          class="glass-card p-5 rounded-xl group hover:border-emerald-500/40 transition-all duration-300"
+        >
+          <h3
+            class="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors mb-1"
+          >
+            backend & cloud systems
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400">
+            Microservices, database architecture, low-latency caching, Docker, cloud deployment
+          </p>
+        </article>
+      
+
+        <article
+          class="glass-card p-5 rounded-xl group hover:border-emerald-500/40 transition-all duration-300"
+        >
+          <h3
+            class="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors mb-1"
+          >
+            forward deployed / solutions
+          </h3>
+          <p class="text-xs text-zinc-600 dark:text-zinc-400">
+            Technical integrations, client-facing engineering, developer advocacy & tooling
+          </p>
+        </article>
+      
+      </div>
+    </section>
+  
+      
+    <section class="mb-16" aria-labelledby="section-tech-title">
+      <h2
+        id="section-tech-title"
+        class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2 mb-6"
+      >
+        <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+        tech stack & tooling
+      </h2>
+
+      <div class="space-y-4">
+        
+        <div class="glass-card p-4 rounded-xl">
+          <h3
+            class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold uppercase tracking-wider block mb-2.5"
+          >
+            // Core Languages
+          </h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Python</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">JavaScript (ES6+)</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">SQL</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">HTML5</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">CSS3</span>
+          </div>
+        </div>
+      
+
+        <div class="glass-card p-4 rounded-xl">
+          <h3
+            class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold uppercase tracking-wider block mb-2.5"
+          >
+            // AI, Machine Learning & Agent Stack
+          </h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="glass-pill px-3 py-1 rounded-md text-emerald-700 dark:text-emerald-300 border-emerald-500/20">Bayesian Knowledge Tracing (BKT)</span>
+<span class="glass-pill px-3 py-1 rounded-md text-emerald-700 dark:text-emerald-300 border-emerald-500/20">Reinforcement Learning (RL)</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">OpenAI API</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Hugging Face</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">LangChain</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Ollama</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">ChromaDB</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">TensorFlow</span>
+          </div>
+        </div>
+      
+
+        <div class="glass-card p-4 rounded-xl">
+          <h3
+            class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold uppercase tracking-wider block mb-2.5"
+          >
+            // Web & Application Frameworks
+          </h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">React.js</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Next.js</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">FastAPI</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Node.js</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Tailwind CSS</span>
+          </div>
+        </div>
+      
+
+        <div class="glass-card p-4 rounded-xl">
+          <h3
+            class="text-[11px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold uppercase tracking-wider block mb-2.5"
+          >
+            // Databases, Cloud & DevOps
+          </h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">PostgreSQL</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Redis</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Supabase</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Vercel</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Docker</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">Git & GitHub</span>
+<span class="glass-pill px-3 py-1 rounded-md text-zinc-800 dark:text-zinc-200">iPerf3</span>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+  
+      
+    <section class="mb-16" aria-labelledby="section-media-title">
+      <h2
+        id="section-media-title"
+        class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2 mb-6"
+      >
+        <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+        media & documentaries
+      </h2>
+
+      <article
+        class="glass-card p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+      >
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <svg
+              class="w-5 h-5 text-red-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12.2439 4C12.778 4.00294 14.1143 4.01586 15.5341 4.07273L16.0375 4.09468C17.467 4.16236 18.8953 4.27798 19.6037 4.4755C20.5486 4.74095 21.2913 5.5155 21.5423 6.49732C21.942 8.05641 21.992 11.0994 21.9982 11.8358L21.9991 11.9884L21.9991 11.9991L21.9982 12.1625C21.992 12.8989 21.942 15.9419 21.5423 17.501C21.2878 18.4864 20.5451 19.261 19.6037 19.5228C18.8953 19.7203 17.467 19.8359 16.0375 19.9036L15.5341 19.9255C14.1143 19.9824 12.778 19.9953 12.2439 19.9983L12.0095 19.9991L11.9991 19.9991L11.7545 19.9983C10.6241 19.9921 5.89772 19.941 4.39451 19.5228C3.4496 19.2573 2.70692 18.4828 2.45587 17.501C2.0562 15.9419 2.00624 12.8989 2 12.1625V11.8358C2.00624 11.0994 2.0562 8.05641 2.45587 6.49732C2.7104 5.51186 3.45308 4.73732 4.39451 4.4755C5.89772 4.05723 10.6241 4.00622 11.7545 4H12.2439ZM9.99911 8.49914V15.4991L15.9991 11.9991L9.99911 8.49914Z"
+              />
+            </svg>
+            <h3 class="text-base font-bold text-zinc-900 dark:text-white">
+              TechUntold
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">@TechUntold-btg</span>
+          </div>
+          <p
+            class="text-xs text-zinc-600 dark:text-zinc-300 max-w-lg leading-relaxed"
+          >
+            I script and produce deep-dive video documentaries on YouTube analyzing the architecture, market dominance, and strategic downfall of iconic computing and software giants including <span class="text-emerald-600 dark:text-emerald-400 font-semibold">WinRAR</span>, <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Skype</span>, and <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Nokia</span>.
+          </p>
+        </div>
+
+        <a
+          href="https://www.youtube.com/@TechUntold-btg"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600/10 border border-red-500/30 hover:bg-red-600 hover:text-white text-red-500 dark:text-red-400 text-xs font-mono transition-all duration-300"
+        >
+          <span>watch on youtube</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    </section>
+  
+      
+    <section class="mb-16" aria-labelledby="section-education-title">
+      <h2
+        id="section-education-title"
+        class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2 mb-8"
+      >
+        <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+        education & credentials
+      </h2>
+
+      <div class="space-y-8">
+        <article class="glass-card p-6 rounded-xl">
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1"
+          >
+            <h3 class="text-base font-bold text-zinc-900 dark:text-white">
+              Federal University of Technology, Minna (FUTMINNA)
+            </h3>
+            <span class="text-xs text-zinc-500 font-mono">(sep 2021 – aug 2026)</span>
+          </div>
+          <p
+            class="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-1"
+          >
+            bachelor of technology (b.tech) in computer science
+          </p>
+          <p
+            class="text-xs text-zinc-600 dark:text-zinc-400 mt-3 leading-relaxed"
+          >
+            <strong class="text-zinc-900 dark:text-zinc-200">Key Coursework:</strong>
+            Data Structures & Algorithms, Artificial Intelligence, Machine Learning, Database Management Systems, Computer System Performance & Benchmarking, Software Engineering.
+          </p>
+          <p
+            class="text-xs text-zinc-700 dark:text-zinc-300 mt-2 leading-relaxed"
+          >
+            <strong class="text-zinc-900 dark:text-zinc-200">Undergraduate Thesis:</strong>
+            Development of an Adaptive Learning System for Personalized Education using Bayesian Knowledge Tracing.
+          </p>
+        </article>
+
+        <div>
+          <h3
+            class="text-xs uppercase tracking-wider text-zinc-500 font-semibold mb-3"
+          >
+            // Verified Certifications
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            
+        <article class="glass-card p-4 rounded-lg">
+          <time
+            datetime="Nov 2022"
+            class="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold block mb-1"
+          >Nov 2022</time>
+          <h4 class="text-xs font-bold text-zinc-900 dark:text-white">
+            Certified Frontend Web Developer
+          </h4>
+          <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">
+            IRL IT Solutions, Kaduna
+          </p>
+        </article>
+      
+
+        <article class="glass-card p-4 rounded-lg">
+          <time
+            datetime="Aug 2017"
+            class="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold block mb-1"
+          >Aug 2017</time>
+          <h4 class="text-xs font-bold text-zinc-900 dark:text-white">
+            Computer Program (Distinction)
+          </h4>
+          <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">
+            Deklag, Kaduna
+          </p>
+        </article>
+      
+
+        <article class="glass-card p-4 rounded-lg">
+          <time
+            datetime="Aug 2023"
+            class="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono font-semibold block mb-1"
+          >Aug 2023</time>
+          <h4 class="text-xs font-bold text-zinc-900 dark:text-white">
+            Financial Literacy & Loans
+          </h4>
+          <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1">
+            GIZ & Central Bank of Nigeria
+          </p>
+        </article>
+      
+          </div>
+        </div>
+      </div>
+    </section>
+  
+      
+    <section class="mb-20" aria-labelledby="section-socials-title">
+      <h2
+        id="section-socials-title"
+        class="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white flex items-center gap-2 mb-8"
+      >
+        <span class="text-emerald-500 dark:text-emerald-400 font-bold" aria-hidden="true">&gt;</span>
+        socials & contact
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <a
+          href="https://github.com/Bentheghost"
+          target="_blank" rel="noopener noreferrer"
+          class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/40 transition-all duration-300"
+          aria-label="GitHub: @Bentheghost"
+        >
+          <div class="flex items-center gap-3">
+            
+        <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-emerald-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+      
+            <div>
+              <h3
+                class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+              >
+                GitHub
+              </h3>
+              <p class="text-[11px] text-zinc-500 font-mono">@Bentheghost</p>
+            </div>
+          </div>
+          <span
+            class="text-zinc-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"
+            aria-hidden="true"
+          >→</span>
+        </a>
+      
+
+        <a
+          href="https://www.youtube.com/@TechUntold-btg"
+          target="_blank" rel="noopener noreferrer"
+          class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/40 transition-all duration-300"
+          aria-label="YouTube: @TechUntold-btg"
+        >
+          <div class="flex items-center gap-3">
+            
+        <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-red-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12.2439 4C12.778 4.00294 14.1143 4.01586 15.5341 4.07273L16.0375 4.09468C17.467 4.16236 18.8953 4.27798 19.6037 4.4755C20.5486 4.74095 21.2913 5.5155 21.5423 6.49732C21.942 8.05641 21.992 11.0994 21.9982 11.8358L21.9991 11.9884L21.9991 11.9991L21.9982 12.1625C21.992 12.8989 21.942 15.9419 21.5423 17.501C21.2878 18.4864 20.5451 19.261 19.6037 19.5228C18.8953 19.7203 17.467 19.8359 16.0375 19.9036L15.5341 19.9255C14.1143 19.9824 12.778 19.9953 12.2439 19.9983L12.0095 19.9991L11.9991 19.9991L11.7545 19.9983C10.6241 19.9921 5.89772 19.941 4.39451 19.5228C3.4496 19.2573 2.70692 18.4828 2.45587 17.501C2.0562 15.9419 2.00624 12.8989 2 12.1625V11.8358C2.00624 11.0994 2.0562 8.05641 2.45587 6.49732C2.7104 5.51186 3.45308 4.73732 4.39451 4.4755C5.89772 4.05723 10.6241 4.00622 11.7545 4H12.2439ZM9.99911 8.49914V15.4991L15.9991 11.9991L9.99911 8.49914Z"/>
+        </svg>
+      
+            <div>
+              <h3
+                class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+              >
+                YouTube
+              </h3>
+              <p class="text-[11px] text-zinc-500 font-mono">@TechUntold-btg</p>
+            </div>
+          </div>
+          <span
+            class="text-zinc-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"
+            aria-hidden="true"
+          >→</span>
+        </a>
+      
+
+        <a
+          href="https://x.com/Topboy_benji"
+          target="_blank" rel="noopener noreferrer"
+          class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/40 transition-all duration-300"
+          aria-label="X (Twitter): @Topboy_benji"
+        >
+          <div class="flex items-center gap-3">
+            
+        <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-emerald-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.6874 3.0625L12.6907 8.77425L8.37045 3.0625H2.11328L9.58961 12.8387L2.50378 20.9375H5.53795L11.0068 14.6886L15.7863 20.9375H21.8885L14.095 10.6342L20.7198 3.0625H17.6874ZM16.6232 19.1225L5.65436 4.78217H7.45745L18.3034 19.1225H16.6232Z"/>
+        </svg>
+      
+            <div>
+              <h3
+                class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+              >
+                X (Twitter)
+              </h3>
+              <p class="text-[11px] text-zinc-500 font-mono">@Topboy_benji</p>
+            </div>
+          </div>
+          <span
+            class="text-zinc-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"
+            aria-hidden="true"
+          >→</span>
+        </a>
+      
+
+        <a
+          href="https://wa.me/2348171263915"
+          target="_blank" rel="noopener noreferrer"
+          class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/40 transition-all duration-300"
+          aria-label="WhatsApp: +234 817 126 3915"
+        >
+          <div class="flex items-center gap-3">
+            
+        <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-emerald-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12.004 2c-5.518 0-9.996 4.478-9.996 9.996 0 1.761.458 3.477 1.328 4.99L2.004 22l5.176-1.32c1.47.818 3.13 1.252 4.824 1.252 5.518 0 9.996-4.478 9.996-9.996S17.522 2 12.004 2zm4.877 14.286c-.206.582-1.2 1.07-1.654 1.139-.454.07-.946.096-2.92-.72-1.974-.816-3.23-2.825-3.328-2.956-.098-.13-2.222-2.956-2.222-5.636 0-2.68 1.4-3.996 1.896-4.542.496-.546 1.082-.685 1.442-.685.36 0 .72.003 1.034.02.33.018.77-.124 1.206.924.454 1.09 1.542 3.774 1.676 4.048.134.274.224.594.044.954-.18.36-.27.584-.54.898-.27.314-.568.7-.812.94-.27.266-.55.556-.236 1.096.314.54 1.396 2.302 2.996 3.726 2.056 1.83 3.792 2.398 4.332 2.668.54.27.854.226 1.17-.138.314-.364 1.352-1.572 1.712-2.112.36-.54.72-.45 1.206-.27.486.18 3.084 1.454 3.614 1.718.53.264.884.394 1.014.618.13.224.13 1.296-.076 1.878z"/>
+        </svg>
+      
+            <div>
+              <h3
+                class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+              >
+                WhatsApp
+              </h3>
+              <p class="text-[11px] text-zinc-500 font-mono">+234 817 126 3915</p>
+            </div>
+          </div>
+          <span
+            class="text-zinc-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"
+            aria-hidden="true"
+          >chat →</span>
+        </a>
+      
+
+        <a
+          href="tel:+2348171263915"
+          
+          class="glass-card p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/40 transition-all duration-300"
+          aria-label="Direct Call: +234 817 126 3915"
+        >
+          <div class="flex items-center gap-3">
+            
+        <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
+      
+            <div>
+              <h3
+                class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+              >
+                Direct Call
+              </h3>
+              <p class="text-[11px] text-zinc-500 font-mono">+234 817 126 3915</p>
+            </div>
+          </div>
+          <span
+            class="text-zinc-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"
+            aria-hidden="true"
+          >call →</span>
+        </a>
+      
+
+          <div
+            class="sm:col-span-2 glass-card p-4 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 group hover:border-emerald-500/40 transition-all duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-emerald-500 transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              <div>
+                <h3
+                  class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+                >
+                  Curriculum Vitae / Resume
+                </h3>
+                <p
+                  class="text-[11px] text-zinc-500 dark:text-zinc-400 font-mono"
+                >
+                  Chukwuebuka Benjamin Ugwu — Full-Stack & AI Systems
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+              <a
+                href="resume.pdf"
+                download="Chukwuebuka_Benjamin_Ugwu_Resume.pdf"
+                class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-emerald-500 text-black hover:bg-emerald-400 text-xs font-mono font-bold rounded-lg transition-all duration-200"
+              >
+                <span>download pdf</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                href="https://drive.google.com/file/d/19mJYNuwIb_NIzmPozoH6OJe08TJ_tout/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-3 py-2 bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-300 text-xs font-mono rounded-lg transition-all duration-200"
+                title="View on Google Drive"
+                aria-label="View resume on Google Drive"
+              >
+                <span>google drive <span aria-hidden="true">↗</span></span>
+              </a>
+            </div>
+          </div>
+        
+
+          <a
+            href="mailto:ebukaugwu41@gmail.com"
+            class="sm:col-span-2 glass-card p-4 rounded-xl flex items-center justify-between group hover:border-emerald-500/40 transition-all duration-300"
+            aria-label="Send direct email to ebukaugwu41@gmail.com"
+          >
+            <div class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-zinc-500 dark:text-zinc-400 group-hover:text-emerald-500 transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <div>
+                <h3
+                  class="text-xs font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors"
+                >
+                  Direct Email
+                </h3>
+                <p
+                  class="text-[11px] text-zinc-600 dark:text-zinc-400 font-mono"
+                >
+                  ebukaugwu41@gmail.com
+                </p>
+              </div>
+            </div>
+            <span
+              class="text-xs text-emerald-600 dark:text-emerald-400 font-mono group-hover:underline"
+            >send message →</span>
+          </a>
+        
+      </div>
+    </section>
+  
+      
+    <footer
+      class="pt-8 pb-12 border-t border-zinc-200/80 dark:border-zinc-800/80 text-center"
+      role="contentinfo"
+    >
+      <p class="text-xs text-zinc-500 font-mono tracking-wider lowercase">
+        chukwuebuka benjamin ugwu
+        <span class="text-zinc-400 dark:text-zinc-700" aria-hidden="true">//</span>
+        remote & hybrid // wat
+      </p>
+      <p class="text-[10px] text-zinc-400 dark:text-zinc-600 mt-2 font-mono">
+        crafted with zero bloat • html5 + tailwind css
+      </p>
+    </footer>
+  
+    </main>
+
+    <script src="src/scripts/matrix.js" defer></script>
+    <script src="src/scripts/theme.js" defer></script>
+    <script src="src/scripts/telemetry.js" defer></script>
+  </body>
+</html>
