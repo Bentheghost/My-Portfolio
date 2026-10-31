@@ -65,8 +65,8 @@ export const portfolioData = {
       company: "BFARMCON Limited",
       url: "https://github.com/Bentheghost/BFARMCON-landing-page",
       period: "aug 2026 – present",
-      role: "web developer",
-      description: "Architected and launched a commercial agribusiness web presence and landing platform on Vercel with automated client inquiry routing and sub-second load times engineered specifically for low-bandwidth mobile environments.",
+      role: "forward deployed full-stack developer",
+      description: "Designed, built, and deployed a responsive commercial web platform on Vercel with automated inquiry dispatch, custom domain DNS routing, XML sitemaps, and Google Search Console indexing.",
       isCurrent: true
     },
     {
@@ -114,9 +114,9 @@ export const portfolioData = {
     {
       id: "02",
       badge: "Production Commercial",
-      title: "BFARMCON-Landing-Page",
-      description: "High-converting commercial landing platform built for agribusiness operations, optimized for sub-second mobile load speeds and automated inquiry dispatch.",
-      tags: ["JavaScript", "Tailwind CSS", "Vercel", "Form Routing"],
+      title: "Commercial Agro-Supply Web Platform",
+      description: "Designed, built, and deployed a responsive, production-ready commercial web platform on Vercel, configuring custom domain DNS routing, XML sitemaps, and Google Search Console indexing.",
+      tags: ["React.js", "Next.js", "JavaScript", "Web3Forms API", "Vercel", "Custom DNS"],
       repoUrl: "https://github.com/Bentheghost/BFARMCON-landing-page",
       ctaLabel: "inspect repo",
       isLiveRepo: true
