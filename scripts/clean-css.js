@@ -29,3 +29,4 @@ try {
 } catch (err) {
   // Fail-soft if style.css does not exist yet
 }
+
