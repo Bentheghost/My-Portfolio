@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build:html": "node scripts/build.js",
-    "build:css": "tailwindcss -i ./src/styles/input.css -o ./style.css --minify",
+    "build:css": "tailwindcss -i ./src/styles/input.css -o ./style.css --minify && node scripts/clean-css.js",
     "build": "npm run build:html && npm run build:css",
     "lint": "node scripts/lint.js",
     "watch:css": "tailwindcss -i ./src/styles/input.css -o ./style.css --watch",
