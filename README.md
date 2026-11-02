@@ -162,6 +162,7 @@ Because this project compiles to a standalone, zero-dependency static bundle (`i
 ## 📬 Contact & Connect
 
 * **Full Name:** Chukwuebuka Benjamin Ugwu
+* **LinkedIn:** [Chukwuebuka Ugwu](https://www.linkedin.com/in/chukwuebuka-ugwu-6285a9448)
 * **GitHub:** [@Bentheghost](https://github.com/Bentheghost)
 * **X (Twitter):** [@Topboy_benji](https://x.com/Topboy_benji)
 * **YouTube:** [@TechUntold-btg](https://www.youtube.com/@TechUntold-btg)

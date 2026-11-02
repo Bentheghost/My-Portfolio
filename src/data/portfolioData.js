@@ -226,6 +226,13 @@ export const portfolioData = {
 
   socials: [
     {
+      type: "linkedin",
+      name: "LinkedIn",
+      handle: "Chukwuebuka Ugwu",
+      url: "https://www.linkedin.com/in/chukwuebuka-ugwu-6285a9448",
+      action: "connect →"
+    },
+    {
       type: "github",
       name: "GitHub",
       handle: "@Bentheghost",

@@ -32,6 +32,7 @@ function generateHtml() {
     "image": `${meta.url}/${personal.avatar}`,
     "sameAs": [
       "https://github.com/Bentheghost",
+      "https://www.linkedin.com/in/chukwuebuka-ugwu-6285a9448",
       "https://www.youtube.com/@TechUntold-btg",
       "https://x.com/Topboy_benji"
     ],
