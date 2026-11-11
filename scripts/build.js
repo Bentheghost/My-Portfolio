@@ -27,7 +27,7 @@ function generateHtml() {
     "@type": "Person",
     "name": personal.fullName,
     "alternateName": [personal.name, "Bentheghost"],
-    "jobTitle": "Full-Stack Engineer & AI Systems Builder",
+    "jobTitle": "Full-Stack & Applied AI Engineer | LLM Evaluation & RLHF Specialist",
     "url": meta.url,
     "image": `${meta.url}/${personal.avatar}`,
     "sameAs": [
@@ -38,15 +38,20 @@ function generateHtml() {
     ],
     "knowsAbout": [
       "Full-Stack Development",
-      "React",
-      "Next.js",
+      "Applied AI",
+      "LLM Evaluation",
+      "Reinforcement Learning from Human Feedback (RLHF)",
+      "Direct Preference Optimization (DPO)",
+      "Chain-of-Thought (CoT) Verification",
+      "FastAPI",
       "Python",
-      "Bayesian Knowledge Tracing",
-      "Reinforcement Learning",
+      "React.js",
+      "Next.js",
       "PostgreSQL",
       "Redis",
-      "Low-Bandwidth Architecture",
-      "Network Benchmarking"
+      "Bayesian Knowledge Tracing (BKT)",
+      "Reinforcement Learning (RL)",
+      "Systems Performance & Benchmarking"
     ],
     "alumniOf": {
       "@type": "CollegeOrUniversity",
@@ -68,7 +73,7 @@ function generateHtml() {
     <link rel="apple-touch-icon" href="favicon.png" />
 
     <meta property="og:title" content="${meta.title}" />
-    <meta property="og:description" content="Building production-ready full-stack applications and AI pipelines engineered for real-world constraints." />
+    <meta property="og:description" content="${meta.description}" />
     <meta property="og:image" content="${meta.ogImage}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${meta.url}" />

@@ -1,8 +1,8 @@
-// Portfolio data source
+// Portfolio data source — synced with production CV
 export const portfolioData = {
   meta: {
-    title: "Chukwuebuka Benjamin Ugwu — Full-Stack Engineer & AI Systems Builder",
-    description: "Portfolio of Chukwuebuka Benjamin Ugwu. Full-Stack Engineer and AI Systems Builder specializing in low-bandwidth optimization, offline-first architectures, BKT, and Reinforcement Learning.",
+    title: "Chukwuebuka Benjamin Ugwu — Full-Stack & Applied AI Engineer | LLM Evaluation & RLHF Specialist",
+    description: "Portfolio of Chukwuebuka Benjamin Ugwu. Full-Stack & Applied AI Engineer and LLM Evaluation Specialist with expertise in FastAPI, React, Next.js, RLHF, DPO, CoT verification, BKT, and low-latency architectures.",
     url: "https://benjamindev-uc.vercel.app",
     ogImage: "profile.jpg",
     twitterHandle: "@Topboy_benji",
@@ -13,89 +13,94 @@ export const portfolioData = {
     name: "benjamin",
     fullName: "Chukwuebuka Benjamin Ugwu",
     handle: "@Bentheghost",
+    roleTitle: "full-stack & applied ai // rlhf specialist",
     avatar: "profile.jpg",
-    avatarAlt: "Portrait of Chukwuebuka Benjamin Ugwu, Full-Stack Engineer and AI Systems Builder",
+    avatarAlt: "Portrait of Chukwuebuka Benjamin Ugwu, Full-Stack & Applied AI Engineer",
     statusText: "online",
-    statusTooltip: "available for remote work",
+    statusTooltip: "ready for global contractor / deel / eor onboarding (utc+1 / emea overlap)",
     uptimeBadge: "99.98% uptime...",
     bootTimestamp: "2026-10-05T11:14:27+01:00",
     timeZone: "Africa/Lagos",
-    location: "remote & hybrid // wat"
+    location: "kaduna, nigeria (utc+1 / emea overlap)"
   },
 
   about: {
     heading: "about",
-    subheading: "systems, intelligence & real-world constraints",
+    subheading: "full-stack systems, applied ai & structured evaluation",
     paragraphs: [
-      "I specialize in building production-ready full-stack web applications and AI-powered systems engineered for real-world constraints—specifically <strong class=\"text-zinc-900 dark:text-white font-medium\">low-bandwidth optimization</strong>, <strong class=\"text-zinc-900 dark:text-white font-medium\">offline-first architectures</strong>, and <strong class=\"text-zinc-900 dark:text-white font-medium\">localized multilingual scaffolding</strong>.",
-      "Working primarily with <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">Python</strong>, <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">React</strong>, <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">PostgreSQL</strong>, and <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">Redis</strong>, I bridge the gap between responsive frontend interfaces and intelligent backend pipelines—integrating machine learning models like <strong class=\"text-zinc-900 dark:text-white font-medium\">Bayesian Knowledge Tracing (BKT)</strong> and <strong class=\"text-zinc-900 dark:text-white font-medium\">Reinforcement Learning (RL)</strong> to deliver personalized, adaptive user experiences."
+      "I am a <strong class=\"text-zinc-900 dark:text-white font-medium\">Full-Stack & Applied AI Engineer</strong> and <strong class=\"text-zinc-900 dark:text-white font-medium\">LLM Evaluation Specialist</strong> with a B.Tech in Computer Science and hands-on production experience architecting low-latency web applications, adaptive machine learning engines, and structured AI evaluation pipelines.",
+      "My work bridges high-reliability web engineering with applied intelligence: shipping end-to-end applications using <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">Python (FastAPI, Flask)</strong>, <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">JavaScript/TypeScript (React, Next.js, Node.js)</strong>, <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">PostgreSQL</strong>, and <strong class=\"text-emerald-600 dark:text-emerald-300 font-normal\">Redis</strong>, while leading evaluation workflows across <strong class=\"text-zinc-900 dark:text-white font-medium\">Reinforcement Learning from Human Feedback (RLHF)</strong>, <strong class=\"text-zinc-900 dark:text-white font-medium\">Direct Preference Optimization (DPO)</strong>, <strong class=\"text-zinc-900 dark:text-white font-medium\">Chain-of-Thought (CoT) reasoning verification</strong>, and <strong class=\"text-zinc-900 dark:text-white font-medium\">Bayesian Knowledge Tracing (BKT)</strong>."
     ],
     impactHighlights: [
       {
-        title: "Multilingual Adaptive Pipeline",
-        description: "Architected dual-engine BKT + RL learning pipeline supporting 4 languages (English, Yoruba, Igbo, and Hausa) across multiple curricula."
+        title: "AI Adaptive Learning & Multilingual Platform",
+        description: "Architected end-to-end BKT + RL learning backend in Python (FastAPI/Flask) across 4 languages (English, Hausa, Igbo, Yoruba) with Redis caching maintaining p95 latency under 120ms and boosting completions by 35%."
       },
       {
-        title: "Low-Bandwidth Production Launches",
-        description: "Deployed commercial web apps on Vercel with automated inquiry/order routing achieving sub-second load times under weak connectivity."
+        title: "Technical LLM Evaluation & RLHF Pipelines",
+        description: "Evaluated multi-turn coding agent trajectories, LLM outputs, and system design reasoning across Python, JS, and SQL using Cohen's Kappa calibration, side-by-side RLHF/DPO preference ranking, and deterministic test harnesses."
       },
       {
-        title: "Systems & Throughput Benchmarking",
-        description: "Automated network throughput stress-testing across Windows client-server environments with iPerf3 and Python scripts to eliminate bottlenecks."
+        title: "Commercial Agro-Supply Production Platform",
+        description: "Shipped React.js/Next.js commercial platform for Bfarmcon with automated Web3Forms & WhatsApp routing, idempotency guards, and debouncing that eliminated mobile failure on 3G networks (0% duplicates/drops)."
+      },
+      {
+        title: "Systems Throughput & Latency Benchmarking",
+        description: "Built automated benchmarking suite in Python with iPerf3 and sockets across Windows 11 and WSL2, automating multi-run stress testing, packet-loss detection, and statistical anomaly reporting."
       }
     ],
-    closingBio: "Outside of writing code, I produce and script technology documentaries on YouTube (<a href=\"https://www.youtube.com/@TechUntold-btg\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-600 dark:text-emerald-400 hover:underline font-medium\">@TechUntold-btg</a>) exploring the rise and fall of iconic hardware and software giants like WinRAR, Skype, and Nokia. When I'm not digging through tech history, I'm an avid European football analyst—tracking player metrics and match trends—or unwinding to Afrobeats and UK drill with Burna Boy and Dave on Spotify."
+    closingBio: "Outside of writing code and evaluating models, I produce and script technology documentaries on YouTube (<a href=\"https://www.youtube.com/@TechUntold-btg\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-emerald-600 dark:text-emerald-400 hover:underline font-medium\">@TechUntold-btg</a>) exploring the architecture, market dominance, and strategic collapse of computing giants like WinRAR, Skype, and Nokia. When I'm away from the terminal, I analyze European football tactics and player metrics, or unwind to Afrobeats and UK drill on Spotify."
   },
 
   cta: {
-    statusBadge: "explore verified proof of work",
+    statusBadge: "ready for global contractor / deel / eor onboarding",
     primaryButton: {
       label: "see my work / featured projects",
       href: "#projects"
     },
     resumeButton: {
-      label: "download resume (pdf)",
+      label: "download cv / resume (pdf)",
       href: "resume.pdf",
-      downloadName: "Chukwuebuka_Benjamin_Ugwu_Resume.pdf"
+      downloadName: "Chukwuebuka_Benjamin_Ugwu_CV.pdf"
     }
   },
 
   experiences: [
     {
-      company: "BFARMCON Limited",
+      company: "Independent Contract / Remote Evaluation Pipelines",
+      period: "aug 2026 – present",
+      role: "ai quality assurance & technical evaluation specialist",
+      description: "Evaluated multi-turn AI coding agent trajectories, LLM outputs, and complex system design reasoning across Python, JavaScript, and SQL benchmarks using strict rubric scoring and Cohen's Kappa calibration standards. Conducted side-by-side RLHF/DPO preference ranking (identifying subtle logic bugs, edge-case regressions, security vulnerabilities, and instruction-following failures), and designed deterministic evaluation harnesses and end-to-end functional/negative QA test suites (verifying concurrency locks, prescription-only validation gates, and boundary conditions) across web and e-pharmacy workflows.",
+      isCurrent: true
+    },
+    {
+      company: "Bfarmcon (Commercial Agro-Supply Web Platform)",
       url: "https://github.com/Bentheghost/BFARMCON-landing-page",
       period: "aug 2026 – present",
-      role: "forward deployed full-stack developer",
-      description: "Designed, built, and deployed a responsive commercial web platform on Vercel with automated inquiry dispatch, custom domain DNS routing, XML sitemaps, and Google Search Console indexing.",
+      role: "forward-deployed full-stack developer",
+      description: "Designed, built, and shipped a production commercial web platform using React.js, Next.js, and JavaScript for an agricultural commodity enterprise. Engineered automated lead-capture and order-routing pipelines integrating Web3Forms API and WhatsApp Business routing with idempotency guards and UI debouncing, reducing failed or duplicate mobile submissions on 3G networks to 0%. Configured automated CI/CD deployment pipelines on Vercel, custom domain DNS routing, XML sitemaps, and Google Search Console indexing.",
       isCurrent: true
     },
     {
-      company: "Adaptive Learning Thesis / FUTMINNA",
+      company: "AI Adaptive Learning & Multilingual Evaluation Platform",
       url: "https://github.com/Bentheghost/Adaptive-Learning-System",
-      period: "2025 – 2026",
-      role: "lead ai & software researcher",
-      description: "Researched and engineered an adaptive learning pipeline combining Bayesian Knowledge Tracing (BKT) and Reinforcement Learning. Developed personalized mastery tracking that dynamically adjusts question difficulty across 4 languages (English, Yoruba, Igbo, Hausa) for STEM & humanities students.",
-      isCurrent: true
-    },
-    {
-      company: "Commercial Client Web Deployments",
-      period: "2023 – present",
-      role: "freelance full-stack developer",
-      description: "Delivered custom full-stack solutions using React, Node.js, and Python. Modeled robust relational database schemas in PostgreSQL, implemented low-latency caching with Redis, and configured automated CI/CD deployment pipelines on Vercel.",
+      period: "dec 2025 – oct 2026",
+      role: "lead full-stack & applied ai engineer",
+      description: "Architected and deployed an end-to-end multilingual AI adaptive learning system (supporting English, Hausa, Igbo, and Yoruba) covering 100-level introductory Python programming, STEM, History, and Literature. Engineered the core inference backend in Python (FastAPI/Flask) combining Bayesian Knowledge Tracing (BKT) for real-time mastery probability estimation with a Reinforcement Learning (RL) policy engine to sequence optimal learning trajectories. Authored, calibrated, and audited 500+ structured domain rubrics, golden reference solutions, and step-by-step Chain-of-Thought (CoT) explanations across programming and humanities modules to eliminate content hallucinations. Designed a normalized PostgreSQL relational schema for longitudinal learner telemetry and integrated Redis for low-latency session caching, maintaining p95 API latency under 120ms and improving student completion rates by 35%.",
       isCurrent: false
     },
     {
-      company: "Systems & Network Benchmarking",
-      period: "2023 – 2024",
-      role: "network & qa benchmarking specialist",
-      description: "Automated comprehensive network stress-testing across Windows client-server environments using iPerf3 and Python data scripts to pinpoint packet drops, latency bottlenecks, and bandwidth throughput ceilings.",
+      company: "Network Throughput & Latency Benchmarking Suite",
+      period: "jul 2026 – sep 2026",
+      role: "systems performance & benchmarking engineer",
+      description: "Built an automated network throughput, memory, and latency benchmarking suite in Python leveraging iPerf3 and socket protocols across Windows 11 and WSL2 client-server environments. Automated multi-run stress testing, packet-loss detection, and statistical anomaly reporting, reconciling performance drift across constrained hardware profiles.",
       isCurrent: false
     },
     {
       company: "IRL IT Solutions",
       period: "2022 – 2023",
       role: "frontend web developer",
-      description: "Developed responsive web interfaces, engineered reusable UI component libraries with modern JavaScript and CSS, and collaborated on cross-functional client deliverables.",
+      description: "Engineered responsive web interfaces and modular UI components with modern JavaScript, HTML5, and CSS3, certified as Frontend Web Developer by IRL IT Solutions (Nov 2022).",
       isCurrent: false
     }
   ],
@@ -103,10 +108,10 @@ export const portfolioData = {
   projects: [
     {
       id: "01",
-      badge: "AI & EdTech",
+      badge: "Applied AI & EdTech",
       title: "Adaptive-Learning-System",
-      description: "Dual-engine personalized education platform utilizing Bayesian Knowledge Tracing (BKT) and Reinforcement Learning (RL) to dynamically calibrate question difficulty and track concept mastery across 4 local languages.",
-      tags: ["Python", "React.js", "PostgreSQL", "Redis", "BKT & RL"],
+      description: "End-to-end multilingual AI adaptive learning system (supporting English, Hausa, Igbo, and Yoruba) combining Bayesian Knowledge Tracing (BKT) for real-time mastery probability estimation and Reinforcement Learning (RL) policy sequencing with 500+ CoT rubrics. Built with Python (FastAPI/Flask), React.js, normalized PostgreSQL, and Redis caching maintaining p95 latency under 120ms.",
+      tags: ["Python (FastAPI/Flask)", "React.js", "PostgreSQL", "Redis", "BKT & RL", "CoT Rubrics"],
       repoUrl: "https://github.com/Bentheghost/Adaptive-Learning-System",
       ctaLabel: "inspect repo",
       isLiveRepo: true
@@ -114,8 +119,8 @@ export const portfolioData = {
     {
       id: "02",
       badge: "Production Commercial",
-      title: "Commercial Agro-Supply Web Platform",
-      description: "Designed, built, and deployed a responsive, production-ready commercial web platform on Vercel, configuring custom domain DNS routing, XML sitemaps, and Google Search Console indexing.",
+      title: "Commercial Agro-Supply Web Platform (Bfarmcon)",
+      description: "Production commercial web platform shipped for an agricultural commodity enterprise using React.js and Next.js. Engineered automated lead-capture via Web3Forms API and WhatsApp Business with idempotency guards and debouncing (0% mobile failure on 3G), hosted on Vercel with custom DNS and Google Search Console indexing.",
       tags: ["React.js", "Next.js", "JavaScript", "Web3Forms API", "Vercel", "Custom DNS"],
       repoUrl: "https://github.com/Bentheghost/BFARMCON-landing-page",
       ctaLabel: "inspect repo",
@@ -123,70 +128,119 @@ export const portfolioData = {
     },
     {
       id: "03",
-      badge: "Assessment Engine",
-      title: "Quiz-Master",
-      description: "Lightweight interactive quiz application featuring dynamic scoring algorithms, topic taxonomy, and real-time client state management.",
-      tags: ["JavaScript", "React", "Node.js", "CSS3"],
-      repoUrl: "https://github.com/Bentheghost/Quiz-Master",
-      ctaLabel: "inspect repo",
-      isLiveRepo: true
+      badge: "AI QA & Evaluation",
+      badgeRight: "Evaluation Harness",
+      title: "Technical LLM Evaluation & RLHF Harness",
+      description: "Deterministic evaluation harnesses and test suites for multi-turn AI coding agents, LLM outputs, and complex system design reasoning across Python, JS, and SQL benchmarks. Utilizes Cohen's Kappa calibration, side-by-side RLHF/DPO preference ranking, and boundary condition auditing.",
+      tags: ["RLHF / DPO", "CoT Verification", "Pytest", "Evaluation Harnesses", "Cohen's Kappa"],
+      ctaLabel: "eval framework",
+      isLiveRepo: false
     },
     {
       id: "04",
       badge: "Systems Benchmarking",
       badgeRight: "CLI Suite",
-      title: "Network Throughput & Latency Suite",
-      description: "Automated client-server network stress-testing suite in Python and iPerf3 executing bandwidth saturation tests and packet-loss diagnostic logging.",
-      tags: ["Python", "iPerf3", "Sockets", "Windows Server"],
-      ctaLabel: "research / test tooling",
+      title: "Network Throughput & Latency Benchmarking Suite",
+      description: "Automated network throughput, memory, and latency benchmarking suite in Python leveraging iPerf3 and socket protocols across Windows 11 and WSL2 client-server environments with multi-run stress testing, packet-loss detection, and statistical anomaly reporting.",
+      tags: ["Python", "iPerf3", "Sockets", "Windows 11 / WSL2", "Stress Testing"],
+      ctaLabel: "research & test tooling",
       isLiveRepo: false
+    },
+    {
+      id: "05",
+      badge: "Assessment Engine",
+      title: "Quiz-Master",
+      description: "Lightweight interactive quiz application featuring dynamic scoring algorithms, topic taxonomy, and real-time client state management.",
+      tags: ["JavaScript", "React", "Node.js", "CSS3", "State Management"],
+      repoUrl: "https://github.com/Bentheghost/Quiz-Master",
+      ctaLabel: "inspect repo",
+      isLiveRepo: true
     }
   ],
 
   roles: [
     {
-      title: "full-stack engineering",
-      stack: "React / Next.js, Node.js, Python, PostgreSQL, Redis, RESTful & GraphQL APIs"
+      title: "full-stack & distributed systems",
+      stack: "FastAPI, Flask, Node.js, React.js, Next.js, PostgreSQL, Redis, RESTful API Architecture, Pydantic, Microservices"
     },
     {
-      title: "ai / ml & agent engineering",
-      stack: "LLM integrations, RAG pipelines, fine-tuning, agentic workflows, BKT & RL"
+      title: "ai training, rlhf & llm evaluation",
+      stack: "RLHF, Direct Preference Optimization (DPO), SFT Golden Responses, Rubric Calibration (Cohen's Kappa), CoT Verification, Factuality Auditing, Multi-Turn Agent Trajectory Grading"
     },
     {
-      title: "backend & cloud systems",
-      stack: "Microservices, database architecture, low-latency caching, Docker, cloud deployment"
+      title: "adaptive ml & intelligent systems",
+      stack: "Bayesian Knowledge Tracing (BKT), Reinforcement Learning (RL) Policy Sequencing, TensorFlow, Latency-Optimized Telemetry"
     },
     {
-      title: "forward deployed / solutions",
-      stack: "Technical integrations, client-facing engineering, developer advocacy & tooling"
+      title: "testing, qa & devops infrastructure",
+      stack: "Pytest, Postman (Contract Testing), E2E & Negative Testing, Docker, WSL2, GitHub Actions (CI/CD), Vercel, iPerf3 Benchmarking"
     }
   ],
 
   techStack: [
     {
-      category: "Core Languages",
-      items: ["Python", "JavaScript (ES6+)", "SQL", "HTML5", "CSS3"]
+      category: "AI Training, RLHF & LLM Evaluation",
+      items: [
+        { name: "RLHF", highlight: true },
+        { name: "Direct Preference Optimization (DPO)", highlight: true },
+        { name: "SFT Golden Response Authoring", highlight: true },
+        { name: "Chain-of-Thought (CoT) Verification", highlight: true },
+        { name: "Rubric Calibration & Cohen's Kappa" },
+        { name: "Hallucination & Factuality Auditing" },
+        { name: "Multi-Turn Agent Trajectory Grading" },
+        { name: "Red-Teaming" }
+      ]
     },
     {
-      category: "AI, Machine Learning & Agent Stack",
+      category: "Core Languages",
+      items: ["Python", "JavaScript (ES6+)", "TypeScript", "SQL", "HTML5", "CSS3", "Bash"]
+    },
+    {
+      category: "Backend & Distributed Systems",
       items: [
+        { name: "FastAPI", highlight: true },
+        { name: "Flask" },
+        { name: "Node.js" },
+        { name: "RESTful API Architecture" },
+        { name: "Pydantic Schema Validation" },
+        { name: "Webhooks" },
+        { name: "Microservices" },
+        { name: "Stream Deduplication" }
+      ]
+    },
+    {
+      category: "Frontend & Full-Stack Web",
+      items: [
+        { name: "React.js", highlight: true },
+        { name: "Next.js", highlight: true },
+        { name: "Tailwind CSS" },
+        { name: "State Management" },
+        { name: "Responsive & Offline-First UI Design" },
+        { name: "Web3Forms API" }
+      ]
+    },
+    {
+      category: "Databases, Caching & ML Engines",
+      items: [
+        { name: "PostgreSQL (Schema Design & Query Optimization)", highlight: true },
+        { name: "Redis (Low-Latency Session Caching)", highlight: true },
         { name: "Bayesian Knowledge Tracing (BKT)", highlight: true },
         { name: "Reinforcement Learning (RL)", highlight: true },
-        { name: "OpenAI API" },
-        { name: "Hugging Face" },
-        { name: "LangChain" },
-        { name: "Ollama" },
-        { name: "ChromaDB" },
         { name: "TensorFlow" }
       ]
     },
     {
-      category: "Web & Application Frameworks",
-      items: ["React.js", "Next.js", "FastAPI", "Node.js", "Tailwind CSS"]
-    },
-    {
-      category: "Databases, Cloud & DevOps",
-      items: ["PostgreSQL", "Redis", "Supabase", "Vercel", "Docker", "Git & GitHub", "iPerf3"]
+      category: "Testing, QA & DevOps Infrastructure",
+      items: [
+        { name: "Pytest" },
+        { name: "Postman (API Contract Testing)" },
+        { name: "End-to-End Functional & Negative Testing" },
+        { name: "Docker" },
+        { name: "WSL2" },
+        { name: "Git & GitHub Actions (CI/CD)" },
+        { name: "Vercel & Custom DNS" },
+        { name: "iPerf3 Network Benchmarking" }
+      ]
     }
   ],
 
@@ -199,11 +253,11 @@ export const portfolioData = {
 
   education: {
     university: {
-      institution: "Federal University of Technology, Minna (FUTMINNA)",
+      institution: "Federal University of Technology, Minna (FUTMinna), Nigeria",
       period: "sep 2021 – aug 2026",
       degree: "bachelor of technology (b.tech) in computer science",
-      coursework: "Data Structures & Algorithms, Artificial Intelligence, Machine Learning, Database Management Systems, Computer System Performance & Benchmarking, Software Engineering.",
-      thesis: "Development of an Adaptive Learning System for Personalized Education using Bayesian Knowledge Tracing."
+      coursework: "Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Database Management Systems, Computer System Performance & Benchmarking, Software Engineering.",
+      thesis: "Development of an AI-Powered Adaptive Learning System for Personalized Education using Bayesian Knowledge Tracing and Reinforcement Learning."
     },
     certifications: [
       {
@@ -270,7 +324,7 @@ export const portfolioData = {
     {
       type: "resume",
       name: "Curriculum Vitae / Resume",
-      handle: "Chukwuebuka Benjamin Ugwu — Full-Stack & AI Systems",
+      handle: "Chukwuebuka Benjamin Ugwu — Full-Stack & Applied AI",
       pdfUrl: "resume.pdf",
       driveUrl: "https://drive.google.com/file/d/19mJYNuwIb_NIzmPozoH6OJe08TJ_tout/view?usp=drive_link"
     },
@@ -285,7 +339,7 @@ export const portfolioData = {
 
   footer: {
     signature: "chukwuebuka benjamin ugwu",
-    subtitle: "remote & hybrid // wat",
+    subtitle: "kaduna, nigeria (utc+1 / emea overlap) • ready for global contractor / deel / eor onboarding",
     tagline: "crafted with zero bloat • html5 + tailwind css"
   }
 };

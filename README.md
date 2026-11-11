@@ -1,6 +1,6 @@
 # ⚡ Chukwuebuka Benjamin Ugwu — Developer Portfolio
 
-A high-performance, modular, terminal-inspired cyberpunk portfolio engineered for **Chukwuebuka Benjamin Ugwu** — Full-Stack Engineer and AI Systems Builder.
+A high-performance, modular, terminal-inspired cyberpunk portfolio engineered for **Chukwuebuka Benjamin Ugwu** — Full-Stack & Applied AI Engineer and LLM Evaluation & RLHF Specialist.
 
 Engineered with zero runtime bloat using **semantic HTML5**, **compiled & minified Tailwind CSS**, and a **modular vanilla JavaScript architecture** featuring pre-production linting and static compilation. Includes an interactive retro bootloader, a live system telemetry dashboard, persistent dual dark/light themes, structured JSON-LD SEO schema, and direct resume/contact integrations.
 

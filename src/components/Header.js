@@ -58,7 +58,7 @@ export function renderHeader(personal) {
           <p
             class="text-[11px] text-zinc-500 dark:text-zinc-400 lowercase tracking-wider font-mono"
           >
-            ${personal.handle}
+            ${personal.handle} <span class="text-zinc-400 dark:text-zinc-600">/</span> <span class="text-emerald-600 dark:text-emerald-400 font-medium">${personal.roleTitle}</span>
           </p>
         </div>
       </div>
