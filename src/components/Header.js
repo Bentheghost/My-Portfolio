@@ -9,7 +9,6 @@ export function renderHeader(personal) {
   const dayNames = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
   const monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
   const initialDate = `${dayNames[now.getDay()]}, ${monthNames[now.getMonth()]} ${now.getDate()}`;
-  const initialUptime = "25d 0h 0m";
 
   return `
     <header
@@ -64,7 +63,7 @@ export function renderHeader(personal) {
       </div>
 
       <div
-        class="sm:absolute sm:top-4 sm:right-6 flex flex-col items-start sm:items-end gap-1.5 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-zinc-200/80 dark:border-zinc-800/80"
+        class="sm:absolute sm:top-5 sm:right-6 flex flex-col items-start sm:items-end gap-2 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-zinc-200/80 dark:border-zinc-800/80"
       >
         <div class="relative group cursor-pointer" tabindex="0" role="status" aria-label="Current status: ${personal.statusText}, ${personal.statusTooltip}">
           <div
@@ -93,24 +92,7 @@ export function renderHeader(personal) {
         </div>
 
         <div
-          class="glass-pill px-2.5 py-1 rounded-lg text-[10px] lowercase tracking-wider transition-all duration-300 cursor-default"
-        >
-          <span class="text-zinc-800 dark:text-white text-[10px] font-mono"
-            >${personal.uptimeBadge}</span
-          >
-        </div>
-
-        <div
-          class="w-24 h-0.5 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden"
-          aria-hidden="true"
-        >
-          <div
-            class="h-full bg-zinc-800 dark:bg-white rounded-full animate-progress"
-          ></div>
-        </div>
-
-        <div
-          class="flex items-center gap-1 text-[10px] lowercase tracking-wider flex-wrap"
+          class="flex items-center gap-1.5 text-[10px] lowercase tracking-wider flex-wrap"
         >
           <div
             class="glass-pill px-2 py-1 rounded-lg transition-all duration-300 cursor-pointer"
@@ -130,16 +112,6 @@ export function renderHeader(personal) {
               id="telemetry-date"
               class="text-zinc-800 dark:text-white font-mono"
               >${initialDate}</time
-            >
-          </div>
-          <div
-            class="glass-pill px-2 py-1 rounded-lg transition-all duration-300 cursor-help"
-            title="Continuous system uptime (anchored to 25 days)"
-          >
-            <span
-              id="telemetry-runtime"
-              class="text-emerald-600 dark:text-emerald-400 font-mono font-bold"
-              >${initialUptime}</span
             >
           </div>
 

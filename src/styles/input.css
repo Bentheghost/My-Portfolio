@@ -63,16 +63,3 @@ html:not(.dark) .glass-pill {
 .terminal-glow {
   box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.2);
 }
-
-@keyframes progressFill {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 99.98%;
-  }
-}
-
-.animate-progress {
-  animation: progressFill 2.5s ease-in-out infinite;
-}

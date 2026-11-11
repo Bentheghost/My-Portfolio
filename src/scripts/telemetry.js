@@ -1,18 +1,6 @@
 (function initTelemetry() {
   const timeEl = document.getElementById("telemetry-time");
   const dateEl = document.getElementById("telemetry-date");
-  const runtimeEl = document.getElementById("telemetry-runtime");
-
-  // Keep uptime counter anchored around 25d baseline across visits
-  let sessionStartTime = Date.now();
-  try {
-    const stored = sessionStorage.getItem("session_start");
-    if (stored && !isNaN(Number(stored))) {
-      sessionStartTime = Number(stored);
-    } else {
-      sessionStorage.setItem("session_start", String(sessionStartTime));
-    }
-  } catch (e) {}
 
   let is12Hour = false;
   try {
@@ -41,13 +29,6 @@
 
     if (dateEl) {
       dateEl.textContent = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
-    }
-
-    if (runtimeEl) {
-      const elapsed = Math.max(0, now.getTime() - sessionStartTime);
-      const hours = Math.floor(elapsed / 3600000);
-      const mins = Math.floor((elapsed % 3600000) / 60000);
-      runtimeEl.textContent = `25d ${hours}h ${mins}m`;
     }
   }
 

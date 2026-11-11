@@ -16,9 +16,8 @@ Engineered with zero runtime bloat using **semantic HTML5**, **compiled & minifi
   * Real-time character scramble decoding prompt with blinking green terminal cursor.
   * Interactive choice between `[ yes ]` (executes an authentic dual-engine ML and network boot sequence) and `[ skip ]` (instant content access).
 * **Live System Telemetry Dashboard:**
-  * **Online Beacon:** Blinking emerald green status indicator (`● online`) featuring a sleek floating tooltip on hover: `"available for remote work"`.
-  * **Uptime Counter:** Animated looping progress bar with active continuous uptime counter anchored to 25 days baseline (`25d ...`).
-  * **Live Regional Telemetry:** Real-time ticking clock formatted for **West Africa Time (WAT / UTC+1)** and localized calendar date.
+  * **Online Beacon:** Blinking emerald green status indicator (`● online`) with floating availability tooltip on hover.
+  * **Live Regional Telemetry:** Real-time ticking clock with 12h/24h toggle on click, and localized calendar date.
 * **Seamless Dark / Light Mode Toggle:**
   * High-contrast obsidian terminal theme (`#090a0c`) with emerald accents (`#10b981`), alongside a clean, modern frosted light theme (`#f8fafc`).
   * Instant theme persistence via `localStorage.theme` with zero flash-of-unstyled-theme (FOUC).

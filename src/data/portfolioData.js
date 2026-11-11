@@ -18,7 +18,6 @@ export const portfolioData = {
     avatarAlt: "Portrait of Chukwuebuka Benjamin Ugwu, Full-Stack & Applied AI Engineer",
     statusText: "online",
     statusTooltip: "ready for global contractor / deel / eor onboarding (utc+1 / emea overlap)",
-    uptimeBadge: "99.98% uptime...",
     bootTimestamp: "2026-10-05T11:14:27+01:00",
     timeZone: "Africa/Lagos",
     location: "kaduna, nigeria (utc+1 / emea overlap)"
